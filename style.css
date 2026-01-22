@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* PAGE */
+body {
+    min-height: 100vh;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TITLE */
+h1 {
+    margin: 2rem 0 1.5rem;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+}
+
+/* MAIN CARD */
+.main {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 600px;
+    min-height: 70vh;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* INNER WRAPPER */
+.main > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+/* INPUT + ADD BUTTON ROW */
+.main > div > :first-child {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+/* INPUT */
+.main input {
+    flex: 1;
+    height: 42px;
+    padding: 0 1rem;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+    color: #0a1f44;
+    outline: none;
+}
+
+.main input:focus {
+    border-color: #f4c430;
+}
+
+/* ADD / SAVE BUTTON */
+.main button {
+    height: 36px;
+    padding: 0 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #f4c430;
+    color: #0a1f44;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.main button:hover {
+    background-color: #e0b000;
+    transform: translateY(-1px);
+}
+
+/* LIST */
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* TODO ITEM */
+li {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 0.7rem 0.9rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+/* TODO TEXT */
+.text {
+    flex: 1;
+    color: #0a1f44;
+    font-weight: 500;
+}
+
+/* SMALL CIRCULAR CHECKBOX (NEAR BUTTONS) */
+/* .checkbox {
+    appearance: none;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid #0a1f44;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+} */
+
+/* 
+.checkbox:checked {
+    background-color: #37f430;
+    border-color: #144914;
+}
+
+.checkbox:checked::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+} */
+ input .checkbox{
+   
+    background-color: green;
+    border-radius: 50%;
+
+}
+/* EDIT & DELETE BUTTONS */
+.edit,
+.delete {
+    background-color: #f4c430;
+    color: #0a1f44;
+    padding: 0.35rem 0.7rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+}
+
+.edit:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+    .main > div > :first-child {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .main button {
+        width: 100%;
+    }
+
+    li {
+        flex-wrap: wrap;
+    }
+
+    .checkbox {
+        margin-left: 0;
+    }
+}
+
